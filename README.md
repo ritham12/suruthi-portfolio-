@@ -1,1 +1,19 @@
-my website portfolio
+Suruthi Ragupathy| Portfolio
+Frontend Developer From Toronto, ON
+What I Build
+Responsive Websites: HTML5, CSS3, JavaScript
+UI/UX to Code: Figma , Pixel-perfect HTML/CSS/Tailwind
+Editor Tools: Drag & Drop Canvas with Fabric.js
+
+
+Projects
+1.Agency Landing Page| HTML,CSS, JS|[Live Demo] [Code]
+-Mobile-first, smooth scroll, form validation
+2.Canva -Style Editor MVP| Fabric.js| [Live Demo] [Code]
+-Drag, resize, export PNG
+
+
+Contact
+Upwork:(https://www.upwork.com/freelancers/~016a32d6e875c3e4f2?mp_source=share)
+
+
