@@ -8,7 +8,8 @@
 - **Editor Tools**: Drag & Drop Canvas with Fabric.js
 
 ### Projects
-**1. Agency Landing Page** | HTML, CSS, JS | [Live Demo] [Code]  
+**1. Agency Landing Page** | HTML, CSS, JS | [Live Demo] (https://ritham12.github.io/suruthi-portfolio-/) [Code] 
+(https://github.com/ritham12/suruthi-portfolio-/) 
 - Mobile-first, smooth scroll, form validation
 
 **2. Canva-Style Editor MVP** | Fabric.js | [Live Demo] (https://ritham12.github.io/suruthi-portfolio-/) [code](https://github.com/ritham12/suruthi-portfolio-)  
