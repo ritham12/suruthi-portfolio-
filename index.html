@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Portfolio Website Design | HTML, CSS & JavaScript</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+background:linear-gradient(45deg,#06b6d4,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#06b6d4;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(15,23,42,.7),
+rgba(15,23,42,.8)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#06b6d4;
+}
+
+.hero h2{
+font-size:1.8rem;
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.1rem;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn-primary{
+background:#06b6d4;
+color:white;
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-secondary{
+background:#8b5cf6;
+color:white;
+}
+
+.btn-secondary:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#06b6d4;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+line-height:1.9;
+font-size:1.1rem;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(6,182,212,.4);
+}
+
+.card i{
+font-size:45px;
+color:#06b6d4;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+/* SKILLS */
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill p{
+margin-bottom:10px;
+}
+
+.bar{
+height:12px;
+background:#334155;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px 0;
+font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+background:linear-gradient(135deg,#06b6d4,#8b5cf6);
+padding:60px 20px;
+text-align:center;
+}
+
+footer h2{
+margin-bottom:15px;
+}
+
+.social-icons{
+margin:25px 0;
+}
+
+.social-icons a{
+color:white;
+font-size:28px;
+margin:0 15px;
+transition:.3s;
+}
+
+.social-icons a:hover{
+transform:translateY(-8px);
+}
+
+.copyright{
+margin-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero h2{
+font-size:1.2rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Suruthi.R</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>What,<span>I build ?</span></h1>
+
+<h2 id="typing"></h2>
+
+<p>
+I create Fast,responsive websites using HTML, CSS and JavaScript.
+I also provide UI/UX design, Canva logo creation,
+Translation Services and Virtual Assistance.
+</p>
+
+<a href="#contact" class="btn btn-primary">Hire Me</a>
+
+<a href="https://www.upwork.com/freelancers/~016a32d6e875c3e4f2?mp_source=share" target="_blank"
+class="btn btn-secondary">
+<i class="fa-brands fa-upwork"></i> Upwork
+</a>
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+My name is Suruthi Ragupathy. I am a freelance web designer and
+administrative professional with experience in responsive website
+development, data entry, customer service, translation and
+transcription services.
+
+I help businesses by creating professional websites,
+maintaining accurate records, providing virtual assistance,
+and delivering high-quality English-Tamil language support.
+</p>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">My Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<i class="fas fa-code"></i>
+<h3>Responsive Website Design</h3>
+<p>HTML, CSS and JavaScript websites.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<h3>UI / UX Design</h3>
+<p>Modern and user-friendly interfaces.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-pen-ruler"></i>
+<h3>Canva Logo Design</h3>
+<p>Creative branding and logo creation.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-keyboard"></i>
+<h3>Data Entry Clerk</h3>
+<p>Fast and accurate data processing.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-user-tie"></i>
+<h3>Admin Support</h3>
+<p>Administrative and virtual assistance.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-language"></i>
+<h3>English ↔ Tamil Transcription</h3>
+<p>Translation and transcription services.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill">
+<p>Data Entry</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill">
+<p>Tamil Transcription</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<p><i class="fas fa-user"></i> Suruthi Ragupathy</p>
+
+<p><i class="fas fa-envelope"></i> ragupathysuruthi@gmail.com</p>
+
+<p><i class="fas fa-location-dot"></i> Ontario, Canada</p>
+
+</section>
+
+<footer>
+
+<h2>Suruthi Ragupathy</h2>
+
+<p>
+Responsive Website Designer • Data Entry Specialist •
+Administrative Support • Tamil Translator
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fa-brands fa-upwork"></i></a>
+
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+<a href="mailto:ragupathysuruthi@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+<p class="copyright">
+© 2026 Suruthi Ragupathy. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+const roles = [
+"Responsive Website Designer",
+"UI / UX Designer",
+"Data Entry Clerk",
+"Admin Support Specialist",
+"English ↔ Tamil Transcription Expert"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+const typing = document.getElementById("typing");
+
+function typeEffect(){
+
+if(charIndex < roles[roleIndex].length){
+
+typing.textContent += roles[roleIndex].charAt(charIndex);
+charIndex++;
+
+setTimeout(typeEffect,80);
+
+}
+else{
+
+setTimeout(eraseEffect,1500);
+
+}
+}
+
+function eraseEffect(){
+
+if(charIndex > 0){
+
+typing.textContent =
+roles[roleIndex].substring(0,charIndex-1);
+
+charIndex--;
+
+setTimeout(eraseEffect,40);
+
+}
+else{
+
+roleIndex++;
+
+if(roleIndex >= roles.length){
+roleIndex = 0;
+}
+
+setTimeout(typeEffect,300);
+
+}
+}
+
+typeEffect();
+
+</script>
+
+</body>
+</html>
